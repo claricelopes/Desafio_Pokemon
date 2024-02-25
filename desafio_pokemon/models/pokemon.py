@@ -1,3 +1,4 @@
+#criando classe com os atributos dos pokemons trabalhados na pasta 'pokedex.py'
 class Pokemon:
     def __init__(self, nome, foto, tipo1, tipo2, golpes):  
         self.nome = nome 

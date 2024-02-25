@@ -4,10 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Busca de Pokemon</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <!--importando a folha de estilo do CSS do bootstrap--> 
     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <!--importando folha de estilo local da pasta 'static', ação necessaria em virtude do framework utilizado, Flask -->
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"> 
 </head>
 
+<!--dando forma ao mecanismo de pesquida dos pokemons. Estilizado com classes do bootstrap-->  
 <body class="d-flex align-items-center py-4">
     <main class="form-signin w-100 m-auto">
         <img src="{{ url_for('static', filename='logo.webp') }}" class="w-100" />
@@ -19,6 +22,7 @@
             <button class="btn btn-primary w-100 py-2" type="submit">Pesquisar</button>
         </form>
     </main>
+    <!--incluindo javascript do bootstrap que oferece funcionalidade--> 
     <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 

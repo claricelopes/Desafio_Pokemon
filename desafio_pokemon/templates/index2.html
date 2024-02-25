@@ -1,29 +1,33 @@
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Busca de Pokemon</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <!-- importando a folha de de estilo do CSS do bootstrap--> 
   <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--importando folha de estilo local da pasta 'static', ação necessaria em virtude do framework utilizado, Flask -->
   <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
-</head>
+</head> 
 
+<!--dando forma a tela de apresentaação das informações de cada pokemon buscado-->
 <body>
-
   <div class="container">
     <div class="container">
       <main>
         <div class="py-5 text-center">
+          <!--apresenta foto logo do projeto-->
           <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='logo.webp') }}" alt="" width="80"> 
+          <!--apresenta a foto do pokemon buscado-->
           <img class="d-block mx-auto mb-4" src="{{foto}}" alt="" width="350">
+          <!--mostra nome do pokemon buscado-->
           <h1 class="maiusculas">{{nome}}</h1>  
         </div>
         <div class="row g-5">
           <div class="">
             <form action="/"> 
               <div class="row g-3">
-
+                <!--apresenta os atributos pré determinados, o(s) tipo(s), um dos golpes, peso e altura do pokemon. Estilizado com classes do bootstrap-->
                 <div class="col-12">
                   <label for="text" class="form-label">Tipo</label>
                   <input type="text" class="form-control" value="{{tipo1}}">     
@@ -46,11 +50,13 @@
                 
               </div>
               <br>
+              <!--botão de 'voltar' para tela inicial--> 
               <button class="w-100 btn btn-primary btn-lg" type="submit">Voltar</button> 
             </form>
           </div>
         </div>
       </main>
+      <!--incluindo javascript do bootstrap que oferece funcionalidade--> 
       <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body> 
 </html> 
